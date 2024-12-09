@@ -1,107 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enhanced Recruitment Dashboard</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="./js/script.js" defer></script>
-</head>
-<body class="bg-gradient-to-b from-purple-900 to-purple-800 text-gray-200 min-h-screen">
-
-  <!-- Sidebar -->
-  <aside id="sidebar" class="fixed inset-y-0 left-0 bg-gray-800 w-64 p-4 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-50">
-    <div class="flex flex-col items-center">
-      <div class="bg-yellow-300 w-12 h-12 rounded-full mb-6"></div>
-      <nav class="space-y-4">
-        <button class="block text-gray-300 hover:text-white flex items-center">
-          <span class="bg-purple-500 p-2 rounded-full mr-2"></span> Workspace
-        </button>
-        <button class="block text-gray-300 hover:text-white flex items-center">
-          <span class="bg-blue-500 p-2 rounded-full mr-2"></span> Tasks
-        </button>
-        <button class="block bg-purple-600 text-white px-4 py-2 rounded-md flex items-center">
-          <span class="p-2 mr-2">+</span> New Workspace
-        </button>
-      </nav>
-    </div>
-  </aside>
-
-  <!-- Main Content -->
-  <div class="flex flex-col md:flex-row">
-    <!-- Header -->
-    <header class="w-full bg-white p-4 md:flex-1 md:ml-64">
-      <div class="flex justify-between items-center">
-        <div>
-          <h1 class="text-xl font-bold">Recruitment Dashboard</h1>
-          <p class="text-sm text-gray-500">Concept UX & UI Design</p>
-        </div>
-        <button id="menu-btn" class="text-yellow-300 md:hidden">
-          Menu
-        </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Recruitment Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gradient-to-b from-purple-900 to-purple-800 text-gray-200 min-h-screen"
+  >
+    <!-- Sidebar -->
+    <aside
+      id="sidebar"
+      class="fixed inset-y-0 left-0 bg-gray-800 w-64 p-4 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-50"
+    >
+      <div class="flex flex-col items-center">
+        <div class="bg-yellow-300 w-12 h-12 rounded-full mb-6"></div>
+        <nav class="space-y-4">
+          <button
+            class="block text-gray-300 hover:text-white flex items-center"
+          >
+            <span class="bg-purple-500 p-2 rounded-full mr-2"></span> Workspace
+          </button>
+          <button
+            class="block text-gray-300 hover:text-white flex items-center"
+          >
+            <span class="bg-blue-500 p-2 rounded-full mr-2"></span> Tasks
+          </button>
+          <button
+            class="block bg-purple-600 text-white px-4 py-2 rounded-md flex items-center"
+          >
+            <span class="p-2 mr-2">+</span> New Workspace
+          </button>
+        </nav>
       </div>
-    </header>
+    </aside>
 
-    <!-- Dashboard -->
-    <main class="w-full p-4 md:flex-1 md:ml-64">
-      <div class="bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden">
-        <!-- Top Section -->
-        <div class="flex justify-between items-center p-4 border-b">
-          <h2 class="text-2xl font-bold">UI & UX Designer</h2>
-          <p class="text-sm text-gray-500">Created 2 days ago</p>
-        </div>
-
-        <!-- Tabs and Filters -->
-        <div class="flex justify-between items-center p-4">
+    <!-- Main Content -->
+    <div class="flex flex-col md:flex-row">
+      <!-- Header -->
+      <header class="w-full bg-white p-4 md:flex-1 md:ml-64">
+        <div class="flex justify-between items-center">
           <div>
-            <button class="bg-yellow-300 px-4 py-2 rounded-md">Active</button>
-            <button class="bg-gray-200 px-4 py-2 rounded-md">Rejected</button>
+            <h1 class="text-xl font-bold">Recruitment Dashboard</h1>
+            <p class="text-sm text-gray-500">Concept UX & UI Design</p>
           </div>
-          <select class="bg-gray-100 px-4 py-2 rounded-md">
-            <option>Highest Rate First</option>
-            <option>Lowest Rate First</option>
-          </select>
+          <button id="menu-btn" class="text-yellow-300 md:hidden">Menu</button>
         </div>
+      </header>
 
-        <!-- Steps Section -->
-        <div id="steps" class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-          <!-- Step 1 -->
-          <div class="bg-gray-100 p-4 rounded-md">
-            <h3 class="font-bold text-lg">Step 1: General Form</h3>
-            <ul class="mt-4 space-y-2">
-              <!-- These items will be dynamically updated -->
-            </ul>
+      <!-- Dashboard -->
+      <main class="w-full p-4 md:flex-1 md:ml-64">
+        <div
+          class="bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden"
+        >
+          <!-- Top Section -->
+          <div class="flex justify-between items-center p-4 border-b">
+            <h2 class="text-2xl font-bold">UI & UX Designer</h2>
+            <p class="text-sm text-gray-500">Created 2 days ago</p>
           </div>
 
-          <!-- Step 2 -->
-          <div class="bg-gray-100 p-4 rounded-md">
-            <h3 class="font-bold text-lg">Step 2: Initial Interview</h3>
-            <ul class="mt-4 space-y-2">
-              <!-- Dynamic content -->
-            </ul>
+          <!-- Tabs and Filters -->
+          <div class="flex justify-between items-center p-4">
+            <div>
+              <button class="bg-yellow-300 px-4 py-2 rounded-md">Active</button>
+              <button class="bg-gray-200 px-4 py-2 rounded-md">Rejected</button>
+            </div>
+            <select class="bg-gray-100 px-4 py-2 rounded-md">
+              <option>Highest Rate First</option>
+              <option>Lowest Rate First</option>
+            </select>
           </div>
 
-          <!-- Step 3 -->
-          <div class="bg-gray-200 p-4 rounded-md flex justify-center items-center">
-            <button id="add-step-btn" class="bg-purple-600 text-white px-4 py-2 rounded-md">
-              Add a New Step
-            </button>
+          <!-- Steps Section -->
+          <div id="steps" class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+            <!-- Step 1 -->
+            <div class="bg-gray-100 p-4 rounded-md">
+              <h3 class="font-bold text-lg">Step 1: General Form</h3>
+              <ul class="mt-4 space-y-2">
+                <!-- These items will be dynamically updated -->
+              </ul>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="bg-gray-100 p-4 rounded-md">
+              <h3 class="font-bold text-lg">Step 2: Initial Interview</h3>
+              <ul class="mt-4 space-y-2">
+                <!-- Dynamic content -->
+              </ul>
+            </div>
+
+            <!-- Step 3 -->
+            <div
+              class="bg-gray-200 p-4 rounded-md flex justify-center items-center"
+            >
+              <button
+                id="add-step-btn"
+                class="bg-purple-600 text-white px-4 py-2 rounded-md"
+              >
+                Add a New Step
+              </button>
+            </div>
+          </div>
+
+          <!-- Calendar -->
+          <div class="p-4">
+            <h3 class="font-bold text-lg">My Calendar</h3>
+            <p class="text-sm text-gray-500">Mon, Jun 24</p>
+            <div class="mt-4">
+              <h4 class="font-semibold text-gray-800">Upcoming</h4>
+              <ul class="mt-4 space-y-2">
+                <!-- Dynamic Content -->
+              </ul>
+            </div>
           </div>
         </div>
-
-        <!-- Calendar -->
-        <div class="p-4">
-          <h3 class="font-bold text-lg">My Calendar</h3>
-          <p class="text-sm text-gray-500">Mon, Jun 24</p>
-          <div class="mt-4">
-            <h4 class="font-semibold text-gray-800">Upcoming</h4>
-            <ul class="mt-4 space-y-2">
-              <!-- Dynamic Content -->
-            </ul>
-          </div>
-        </div>
-      </div>
-    </main>
-  </div>
-</body>
+      </main>
+    </div>
+  </body>
 </html>

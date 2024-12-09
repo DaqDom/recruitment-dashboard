@@ -1,5 +1,8 @@
 /* style.css */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'poppins';
   }
-  
+  @font-face {
+    font-family: 'poppins';
+    src: url(./font/poppins/Poppins-Regular.ttf);
+  }
